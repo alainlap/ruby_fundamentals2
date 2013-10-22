@@ -3,11 +3,11 @@
 def convert_temp temp, unit
 	
 	if unit == "f"
-		c = (temp - 32)*(5.0/9.0)		
-		return "You entered #{temp} Fahrenheit, which is equal to #{c} Celsius"
+		c = (temp-32)*(5.0/9.0)		
+		return "You entered #{temp} Fahrenheit, which is equal to #{c.round(2)} Celsius"
 	elsif unit == "c"
-		f = temp*(9.0/5.0) + 32
-		return "You entered #{temp} Celsius, which is equal to #{f} Fahrenheit"
+		f = temp*(9.0/5.0)+32
+		return "You entered #{temp} Celsius, which is equal to #{f.round(2)} Fahrenheit"
 	else
 		return "Error: You didn't input 'f' or 'c'!"
 	end
